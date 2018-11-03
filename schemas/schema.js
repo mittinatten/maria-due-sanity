@@ -29,6 +29,11 @@ export default createSchema({
                     title: "Cover",
                     name: "cover",
                     type: "image"
+                },
+                {
+                    title: "Spotify",
+                    name: "spotify",
+                    type: "url"
                 }
             ]
         },
@@ -43,8 +48,8 @@ export default createSchema({
                     type: "datetime"
                 },
                 {
-                    title: "Place",
-                    name: "place",
+                    title: "Venue",
+                    name: "venue",
                     type: "string"
                 },
                 {
@@ -60,10 +65,22 @@ export default createSchema({
             ],
             preview: {
                 select: {
-                    title: "place",
+                    title: "venue",
                     subtitle: "date"
                 }
             }
+        },
+        {
+            title: "Front matter",
+            name: "frontMatter",
+            type: "document",
+            fields: [
+                {
+                    title: "Body",
+                    name: "body",
+                    type: "string"
+                }
+            ]
         }
     ])
 })
