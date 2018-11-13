@@ -34,6 +34,85 @@ export default createSchema({
                     title: "Spotify",
                     name: "spotify",
                     type: "url"
+                },
+                {
+                    title: "Songs",
+                    name: "songs",
+                    type: "array",
+                    of: [{
+                        type: "object",
+                        fields: [
+                            {
+                                type: "string",
+                                title: "Title",
+                                name: "title"
+                            },
+                            {
+                                type: "number",
+                                title: "Number",
+                                name: "number"
+                            }
+                        ]
+                    }]
+                },
+                {
+                    title: "Purchase at",
+                    name: "purchaseAt",
+                    type: "array",
+                    of: [{
+                        type: "object",
+                        fields: [
+                            {
+                                type: "url",
+                                name: "url",
+                                title: "URL"
+                            },
+                            {
+                                type: "string",
+                                name: "label",
+                                title: "label"
+                            }
+                        ]
+                    }]
+                }
+            ]
+        },
+        {
+            title: "Appears on",
+            name: "appearsOn",
+            type: "document",
+            fields: [
+                {
+                    title: "Title",
+                    name: "title",
+                    type: "string",
+                },
+                {
+                    title: "Year",
+                    name: "year",
+                    type: "number"
+                },
+                {
+                    title: "By",
+                    name: "by",
+                    type: "object",
+                    fields: [
+                        {
+                            title: "Name",
+                            name: "name",
+                            type: "string"
+                        },
+                        {
+                            title: "Home page",
+                            name: "homePage",
+                            type: "url"
+                        }
+                    ]
+                },
+                {
+                    title: "Spotify",
+                    name: "spotify",
+                    type: "url"
                 }
             ]
         },
@@ -71,6 +150,28 @@ export default createSchema({
             }
         },
         {
+            title: "Video",
+            name: "video",
+            type: "document",
+            fields: [
+                {
+                    title: "Link",
+                    name: "url",
+                    type: "url"
+                },
+                {
+                    title: "Title",
+                    name: "title",
+                    type: "string"
+                },
+                {
+                    title: "Sort Order",
+                    name: "sortOrder",
+                    type: "number"
+                }
+            ]
+        },
+        {
             title: "Front matter",
             name: "frontMatter",
             type: "document",
@@ -78,6 +179,11 @@ export default createSchema({
                 {
                     title: "Body",
                     name: "body",
+                    type: "string"
+                },
+                {
+                    title: "Title",
+                    name: "title",
                     type: "string"
                 }
             ]
