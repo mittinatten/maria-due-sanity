@@ -40,19 +40,8 @@ export default createSchema({
                     name: "songs",
                     type: "array",
                     of: [{
-                        type: "object",
-                        fields: [
-                            {
-                                type: "string",
-                                title: "Title",
-                                name: "title"
-                            },
-                            {
-                                type: "number",
-                                title: "Number",
-                                name: "number"
-                            }
-                        ]
+                        type: "reference",
+                        to: [{type: "song"}]
                     }]
                 },
                 {
@@ -74,6 +63,29 @@ export default createSchema({
                             }
                         ]
                     }]
+                }
+            ]
+        },
+        {
+            title: "Song",
+            name: "song",
+            type: "document",
+            fields: [
+                {
+                    type: "string",
+                    title: "Title",
+                    name: "title"
+                },
+                {
+                    type: "text",
+                    title: "Lyrics",
+                    name: "lyrics"
+                },
+                {
+                    title: "Album",
+                    name: "album",
+                    type: "reference",
+                    to: [{type: "album"}]
                 }
             ]
         },
