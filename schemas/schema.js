@@ -63,6 +63,16 @@ export default createSchema({
                             }
                         ]
                     }]
+                },
+                {
+                    title: "Record label",
+                    name: "recordLabel",
+                    type: "recordLabel"
+                },
+                {
+                    title: "Producer",
+                    name: "producer",
+                    type: "person"
                 }
             ]
         },
@@ -86,6 +96,66 @@ export default createSchema({
                     name: "album",
                     type: "reference",
                     to: [{type: "album"}]
+                },
+                {
+                    type: "array",
+                    title: "Music by",
+                    name: "musicBy",
+                    of: [{
+                        "type": "person"
+                    }]
+                },
+                {
+                    type: "array",
+                    title: "Lyrics by",
+                    name: "lyricsBy",
+                    of: [{
+                        "type": "person"
+                    }]
+                }
+            ]
+        },
+        {
+            title: "Person",
+            name: "person",
+            type: "object",
+            fields: [
+                {
+                    type: "url",
+                    name: "homePage",
+                    title: "Home page"
+                },
+                {
+                    type: "string",
+                    name: "name",
+                    title: "Name",
+                },
+                {
+                    type: "url",
+                    name: "sameAs",
+                    title: "Same as (wikidata, viaf, etc)"
+                },
+                {
+                    type: "url",
+                    name: "about",
+                    title: "Authority"
+                }
+            ]
+        },
+        {
+            title: "Record label",
+            name: "recordLabel",
+            type: "object",
+            fields: [
+                {
+                    type: "url",
+                    name: "homePage",
+                    title: "Home page"
+                },
+                {
+                    type: "string",
+                    name: "name",
+                    title: "Name",
                 }
             ]
         },
@@ -191,7 +261,7 @@ export default createSchema({
                 {
                     title: "Body",
                     name: "body",
-                    type: "string"
+                    type: "text"
                 },
                 {
                     title: "Title",
