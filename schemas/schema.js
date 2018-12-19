@@ -259,13 +259,31 @@ export default createSchema({
             type: "document",
             fields: [
                 {
-                    title: "Body",
+                    title: "Text",
                     name: "body",
-                    type: "text"
+                    type: "array",
+                    of: [{type: "block"}]
                 },
                 {
                     title: "Title",
                     name: "title",
+                    type: "string"
+                }
+            ]
+        },
+        {
+            title: "Contact info",
+            name: "contactInfo",
+            type: "document",
+            fields: [
+                {
+                    title: "Email",
+                    name: "email",
+                    type: "string"
+                },
+                {
+                    title: "Description",
+                    name: "description",
                     type: "string"
                 }
             ]
