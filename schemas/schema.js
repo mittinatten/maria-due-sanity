@@ -222,6 +222,11 @@ export default createSchema({
                     title: "Event URL",
                     name: "eventURL",
                     type: "url"
+                },
+                {
+                    title: "City",
+                    name: "city",
+                    type: "string"
                 }
             ],
             preview: {
