@@ -358,6 +358,11 @@ export default createSchema({
                     of: [{
                         "type": "person"
                     }]
+                },
+                {
+                    type: "url",
+                    title: "Music video",
+                    name: "video"
                 }
             ]
         },
@@ -528,7 +533,12 @@ export default createSchema({
                     title: "Title",
                     name: "title",
                     type: "string"
-                }
+                },
+                {
+                    title: "Image",
+                    name: "image",
+                    type: "image"
+                },
             ]
         },
         {
