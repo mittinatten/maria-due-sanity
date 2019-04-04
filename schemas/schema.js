@@ -465,6 +465,11 @@ export default createSchema({
                     type: "string"
                 },
                 {
+                    title: "Venue URL",
+                    name: "venueURL",
+                    type: "url"
+                },
+                {
                     title: "Description",
                     name: "description",
                     type: "string"
@@ -478,6 +483,11 @@ export default createSchema({
                     title: "City",
                     name: "city",
                     type: "string"
+                },
+                {
+                    title: "Tickets URL",
+                    name: "tickets",
+                    type: "url"
                 },
                 {
                     title: "Country",
