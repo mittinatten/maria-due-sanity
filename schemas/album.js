@@ -19,6 +19,11 @@ export default {
       type: "image",
     },
     {
+      title: "Cover alt-text",
+      name: "coverAlt",
+      type: "string"
+    },
+    {
       title: "Spotify",
       name: "spotify",
       type: "url",
